@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Choose your own Pizza</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-1.12.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      
+      <script type="text/javascript" src="/js/script.js">
+      </script>
+    
+      <!--Load the AJAX API-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		
+		  // Load the Visualization API library and the piechart library.
+		   google.load('visualization', '1.0', {'packages':['corechart']});
+		  google.setOnLoadCallback(draw);
+
+          google.load('visualization', '1.0', {'packages':['sankey']});
+          google.setOnLoadCallback(drawChart);
+		     
+		</script>
+</head>
+<body>
+  <h3 align="center">Build your own pizza</h3>
+<div id="wrapper">
+<div class="container">
+  <ul class="nav nav-tabs nav-justified" role="tablist" id="myTab">
+    <li class="active"><a data-toggle="tab" href="#home">SIZE</a></li>
+    <li><a data-toggle="tab" href="#menu1">CHEESE</a></li>
+    <li><a data-toggle="tab" href="#menu2">TOPPINGS</a></li>
+    <li><a data-toggle="tab" href="#menu3">DASHBOARD</a></li>
+  </ul>
+
+  <div class="tab-content" ID="color">
+    <div id="home" class="tab-pane fade in active">
+      <h4>CHOOSE SIZE AND CRUST</h4>
+      <div id="content-box1">
+        <span class="heading"><p><b>HAND TOSSED</b></p></span>
+        <p> Garlic-seasoned crust with a rich, buttery taste.</p>
+          <div>
+            <input type="radio" name="ht" value="small"/>
+            <span id="equate1">Small(10")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="medium"/>
+            <span id="equate1">Medium(12")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="large"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="xl"/>
+            <span id="equate1">X-Large(16")</span>
+          </div>
+      </div>
+      <div id="content-box2"> 
+        <span class="heading"><b>HANDMADE PAN</b></p></span>
+        <p>Two layers of cheese,toppings to the edge, and a crust that bakes up golden and crispy with a buttery taste.</p>
+        <div>
+          <input type="radio" name="ht" value="medium"/>
+          <span id="equate1">Medium(12")</span>
+        </div>
+      </div>
+      <div id="content-box3">
+        <span class="heading"><b> CRUNCHY THIN CRUST</b></p></span>
+        <p>Thin enough for the optimum crispy to crunchy ration.</p>
+        
+          <div>
+            <input type="radio" name="ht" value="medium"/>
+            <span id="equate1">Medium(12")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="large"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+           
+      </div>
+      <div id="content-box4">
+        <span class="heading"><b> BROOKLYN STYLE</b></p></span>
+        <p>Hand streched to be bid, thin, and perfectly foldable.</p>
+        
+          <div>
+            <input type="radio" name="ht" value="large"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="xl"/>
+            <span id="equate1">X-Large(16")</span>
+          </div>
+         
+      </div>
+      <div style="position:absolute; bottom: 12px" id="new">
+        <span class="heading"><b> GLUTEN FREE CRUST</b></p></span>
+        <p>Domino's pizza made with a Gluten Free Crust.</p>
+        <div>
+          <input type="radio" name="ht" value="small"/>
+          <span id="equate2">Small(10")</span>
+        </div>
+      </div>
+    </div>
+     
+    <div id="menu1" class="tab-pane fade">
+      <div class="option1" style="float: left; height: 200px; width: 400px" >
+            <h6 style="color: #0078ae; margin-left: 15px">CHOOSE CHEESE</h6>
+            
+              <div style="float: left; width: 55%">
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Mozzerella"> Mozzerella<br>
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Italian Cheese"> Italian Cheese<br>
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Blue Cheese"> Blue Cheese<br>
+              </div>
+             
+          </div>
+           <div class="optionlast" style="float: left; height: 270px; width: 400px" >
+                <h6 style="color: #0078ae; margin-left: 15px">CHOOSE SAUSE</h6>
+                
+                    <div style="float: left; width: 55%">
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Salsa"> Salsa<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Pesto"> Pesto<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="BBQ"> BBQ Sauce<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Ranch"> Ranch<br>
+                    </div>
+                 
+            </div>
+    </div>
+
+    <div id="menu2" class="tab-pane fade">
+      
+      <h4 style="color: #0078ae; margin-bottom: 10px;margin-left: 15px">CHOOSE TOPPINGS</h4>
+          <div class="option1" style="float: left; height: 200px; width: 400px" >
+            <h6 style="color: #0078ae; margin-left: 15px">CHOOSE MEATS</h6>
+            
+              <div style="float: left; width: 55%">
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Italian Sausage">Italian Sausage<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Sliced Italian Sausage">Sliced Italian Sausage<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Beef">Beef</Beef><br>
+              </div>
+             
+          </div>
+           <div class="optionlast" style="float: left; height: 270px; width: 400px" >
+                <h6 style="color: #0078ae; margin-left: 15px">CHOOSE NON-MEATS</h6>
+                
+                    <div style="float: left; width: 55%">
+                        
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Black Olives"> Black Olives<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Garlic"> Garlic<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Green Peppers"> Green Peppers<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Jalapeno Peppers">Jalapeno Peppers<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Onions"> Onions<br>
+                    
+                    </div>
+                 
+            </div>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h4>DASHBOARD</h4>
+      <div id="pizza_chart_div"></div>
+      <div id="sankey_basic" style="width: 500px; height: 200px; margin-left:450px;"></div>
+    </div>
+</div>
+
+  <button class="build" id="btn_buid" onclick="sendDataToDatabase()">Order</button>
+<button class="cancel">Cancel</button>
+
+
+</div>
+</div>
+</body>
+</html>
